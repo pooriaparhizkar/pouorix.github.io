@@ -12,6 +12,7 @@ function refreshScreenshots() {
   var swiper = new Swiper(".mySwiper", {
     // loop: true,
     // infinite: true,
+    lazy: true,
     slidesPerView: 1,
     spaceBetween: 0,
     allowTouchMove: false,
