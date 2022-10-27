@@ -42,9 +42,9 @@ function refreshScreenshots() {
       },
     },
   });
-  for (let i = 1; i <= 18; i++) {
-    hawdam[i] = new ImageViewer(document.querySelector(`#hawdam-${i}`));
-  }
+  // for (let i = 1; i <= 18; i++) {
+  //   hawdam[i] = new ImageViewer(document.querySelector(`#hawdam-${i}`));
+  // }
 
   // $(".screenshots-slick").on("swipe", function (event, slick, direction) {
   //   // refreshScreenshots();
