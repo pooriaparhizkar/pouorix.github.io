@@ -15,7 +15,7 @@ function refreshScreenshots() {
     lazy: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    allowTouchMove: false,
+    // allowTouchMove: false,
     autoplay: {
       delay: 1000,
       pauseOnMouseEnter: true,
