@@ -1,9 +1,9 @@
-let hawdam_1;
-let hawdam_2;
+let hawdam = [];
 function refreshScreenshots() {
   setTimeout(() => {
-    hawdam_1.refresh();
-    hawdam_2.refresh();
+    hawdam.forEach((element) => {
+      element.refresh();
+    });
   }, 200);
 }
 (function ($) {
@@ -33,16 +33,17 @@ function refreshScreenshots() {
     creativeEffect: {
       prev: {
         shadow: true,
-        translate: [0, 0, -400],
+        translate: ["-122%", 0, -500],
       },
       next: {
-        translate: ["100%", 0, 0],
+        shadow: true,
+        translate: ["122%", 0, -500],
       },
     },
   });
-
-  hawdam_1 = new ImageViewer(document.querySelector("#hawdam-1"));
-  hawdam_2 = new ImageViewer(document.querySelector("#hawdam-2"));
+  for (let i = 1; i <= 18; i++) {
+    hawdam[i] = new ImageViewer(document.querySelector(`#hawdam-${i}`));
+  }
 
   // $(".screenshots-slick").on("swipe", function (event, slick, direction) {
   //   // refreshScreenshots();
