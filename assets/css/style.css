@@ -18309,6 +18309,32 @@ Rn Slick Dots Style
   background: #212428;
 }
 
+.rn-footer-area .container .row .logo-thumbnail a {
+display: flex;
+  align-items: center;
+}
+.rn-footer-area .container .row .logo-thumbnail a img{
+    transition: 0.3s;
+      border: solid 3px rgba(128, 128, 128, 0.249);
+      border-radius: 50%;
+      min-width: 72px;
+      max-width: 72px;
+      max-height: 72px;
+      min-height: 72px;
+      width: 100%;
+      height: 100%;
+      padding: 6px 3px 0;
+}
+@media only screen and (max-width: 767px) {
+  .rn-footer-area .container .row .logo-thumbnail a img {
+    max-height: 54px;
+    min-height: 54px;
+    max-width: 54px;
+    min-width: 54px;
+    margin-left: 16px;
+  }
+}
+
 .home-classic .rn-header.sticky .header-right a.rn-btn {
   box-shadow: var(--shadow-1);
 }
