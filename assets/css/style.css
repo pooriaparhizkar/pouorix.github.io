@@ -17626,6 +17626,12 @@ span.sr-only {
   padding: 35px 15px;
 }
 
+.rn-portfolio-slick .thumbnail img{
+  min-height: 200px;
+  max-height: 200px;
+  height: 100%;
+}
+
 .blog-slick-activation {
   margin: -35px -15px;
 }
