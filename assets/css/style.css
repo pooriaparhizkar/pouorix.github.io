@@ -19811,6 +19811,26 @@ body.white-version .rn-btn-ulderline {
 .modal-body .row .portfolio-popup-thumbnail .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
 }
+.portfolio-grid{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -32px;
+  max-width: 1440px;
+
+}
+.portfolio-grid >div{
+  min-width: 320px;
+  flex: 1;
+  margin-right: 32px;
+  margin-bottom: 32px;
+
+}
+.portfolio-grid >div >div {
+  width: 100%;
+}
+.portfolio-grid >div >div a {
+  width: 100%;
+}
 
 
 
