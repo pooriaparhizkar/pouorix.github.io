@@ -7940,6 +7940,7 @@ ul.slick-dots li button {
   background: var(--background-color-1);
   box-shadow: var(--shadow-1);
   border-radius: 15px;
+  background: url('../images/loading.gif') 50% 50% no-repeat;
 }
 .rn-video-popup-area .thumbnail img {
   border-radius: 8px;
