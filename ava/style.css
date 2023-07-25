@@ -1,0 +1,19 @@
+body > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: purple;
+}
+.ava {
+  color: white;
+  font-size: 72px;
+  transition: color ease-in-out 0.3s, font-size ease-in-out 0.3s;
+  cursor: wait;
+}
+.ava:hover{
+    color: gold;
+    font-size: 104px;
+}
