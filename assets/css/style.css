@@ -19834,5 +19834,24 @@ body.white-version .rn-btn-ulderline {
 }
 
 
+@keyframes pouorix-skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+.pouorix-skeleton {
+  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background-size: 200% 100%;
+  animation: pouorix-skeleton-loading 1.5s infinite;
+  color: transparent;
+}
+
+/* Animation Keyframes */
+
 
 /*# sourceMappingURL=../maps/style.css.map */

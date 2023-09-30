@@ -518,30 +518,27 @@ function refreshScreenshots() {
 
   imJs.m();
 
-  document.addEventListener("DOMContentLoaded", function() {
-    // Get all images inside the portfolio grid
-    var images = document.querySelectorAll('.rn-portfolio-slick img');
-    var loadedImages = 0;
+// Get all elements with the class 'rn-portfolio-slick'
+var portfolioItems = document.querySelectorAll('.rn-portfolio-slick');
 
-    // Function to check if all images have loaded
-    function checkAllImagesLoaded() {
-        loadedImages++;
-        if (loadedImages === images.length) {
-            // All images have loaded, hide the loading indicator
-            console.log("Loaded");
-        }
-    }
+// Iterate through each portfolio item
+portfolioItems.forEach(function(item) {
+    // Get the image and skeleton element based on the data-skeleton attribute
+    var image = item.querySelector('img[data-src]');
+    var skeletonId = item.getAttribute('data-skeleton');
+    var skeleton = document.getElementById(skeletonId);
 
-    // Add 'load' event listener to all images
-    images.forEach(function(image) {
-        image.addEventListener('load', checkAllImagesLoaded);
-        // If an image is already cached, the 'load' event might not be triggered,
-        // so we check if it's complete here as well
-        if (image.complete) {
-            checkAllImagesLoaded();
-        }
-    });
+    // Load the image
+    image.onload = function() {
+        // When the image is loaded, hide the skeleton and show the image
+        skeleton.style.display = 'none';
+        image.style.display = 'block';
+    };
+
+    // Set the image source to trigger the onload event
+    image.src = image.getAttribute('data-src');
 });
+
 
 
 })(jQuery, window);
