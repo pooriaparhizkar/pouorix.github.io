@@ -511,11 +511,37 @@ function refreshScreenshots() {
         filter: ":not(.external)",
         easing: "swing",
         scrollChange: function ($currentListItem) {
-          console.log(this);
         },
       });
     },
   };
 
   imJs.m();
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all images inside the portfolio grid
+    var images = document.querySelectorAll('.rn-portfolio-slick img');
+    var loadedImages = 0;
+
+    // Function to check if all images have loaded
+    function checkAllImagesLoaded() {
+        loadedImages++;
+        if (loadedImages === images.length) {
+            // All images have loaded, hide the loading indicator
+            console.log("Loaded");
+        }
+    }
+
+    // Add 'load' event listener to all images
+    images.forEach(function(image) {
+        image.addEventListener('load', checkAllImagesLoaded);
+        // If an image is already cached, the 'load' event might not be triggered,
+        // so we check if it's complete here as well
+        if (image.complete) {
+            checkAllImagesLoaded();
+        }
+    });
+});
+
+
 })(jQuery, window);
