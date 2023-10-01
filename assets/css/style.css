@@ -14056,9 +14056,9 @@ body.modal-open {
 .modal .modal-dialog {
   width: 100%;
   max-width: 1230px;
+  margin: auto;
 }
 .modal .modal-dialog .modal-content {
-  padding: 45px;
   border-radius: 10px;
   overflow: hidden;
   border: none;
