@@ -278,3 +278,16 @@ function draw(){
 }
 
 draw();
+
+let anniversaryDate= new Date("12/09/2022");
+let today = new Date();
+// Calculating the time difference
+// of two dates
+let Difference_In_Time =
+  today.getTime() - anniversaryDate.getTime();
+let Difference_In_Days =
+    Math.round
+        (Difference_In_Time / (1000 * 3600 * 24));
+ 
+document.getElementById("days").innerHTML = `${Difference_In_Days} days`;
+
