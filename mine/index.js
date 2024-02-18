@@ -280,14 +280,24 @@ function draw(){
 draw();
 
 let anniversaryDate= new Date("12/09/2022");
+anniversaryDate.setHours(13);
+anniversaryDate.setMinutes(30);
 let today = new Date();
-// Calculating the time difference
-// of two dates
-let Difference_In_Time =
-  today.getTime() - anniversaryDate.getTime();
-let Difference_In_Days =
-    Math.round
-        (Difference_In_Time / (1000 * 3600 * 24));
- 
-document.getElementById("days").innerHTML = `${Difference_In_Days} days`;
+function updateCountdown() {
+  let today = new Date();
+  let timeDifference = today.getTime() - anniversaryDate.getTime();
 
+  // Calculate days, hours, minutes, and seconds
+  let days = Math.floor(timeDifference / (1000 * 3600 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 3600 * 24)) / (1000 * 3600));
+  let minutes = Math.floor((timeDifference % (1000 * 3600)) / (1000 * 60));
+  let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+}
+
+// Initial update
+updateCountdown();
+
+// Update every second
+setInterval(updateCountdown, 1000);
