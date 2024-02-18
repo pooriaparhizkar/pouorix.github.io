@@ -280,7 +280,7 @@ function draw(){
 draw();
 
 let anniversaryDate= new Date("12/09/2022");
-anniversaryDate.setHours(13);
+anniversaryDate.setHours(17);
 anniversaryDate.setMinutes(30);
 let today = new Date();
 function updateCountdown() {
